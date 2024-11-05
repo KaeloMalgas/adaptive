@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Results - Adaptive Testing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Adaptive</span> Testing System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('start_test') }}">Start Test</a></li>
+                    <li class="current"><a href="{{ url_for('view_results') }}">Results</a></li>
+                    <li><a href="{{ url_for('learn_more') }}">Learn More</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>Your Test Results</h1>
+            <div id="results-container">
+                <!-- Results will be dynamically loaded here -->
+                <p>Loading your results...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adaptive Testing System, Copyright &copy; 2023</p>
+    </footer>
+
+    <script>
+        // Here you would typically fetch results from your backend and display them
+        // For demonstration, we'll just show some mock results
+        setTimeout(() => {
+            const resultsContainer = document.getElementById('results-container');
+            resultsContainer.innerHTML = `
+                <h2>Recent Test: Mathematics</h2>
+                <p>Date: ${new Date().toLocaleDateString()}</p>
+                <p>Score: 85%</p>
+                <p>Ability Estimate: 0.75</p>
+                <h3>Breakdown:</h3>
+                <ul>
+                    <li>Algebra: 90%</li>
+                    <li>Geometry: 80%</li>
+                    <li>Calculus: 85%</li>
+                </ul>
+                <button class="button" onclick="alert('Detailed report would be generated here')">Generate Detailed Report</button>
+            `;
+        }, 1000);
+    </script>
+</body>
+</html>

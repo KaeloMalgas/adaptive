@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Adaptive Testing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Adaptive</span> Testing System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('start_test') }}">Start Test</a></li>
+                    <li><a href="{{ url_for('view_results') }}">Results</a></li>
+                    <li><a href="{{ url_for('learn_more') }}">Learn More</a></li>
+                    <li class="current"><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>About Our Adaptive Testing System</h1>
+            <p>Our Adaptive Testing System is designed to revolutionize the way assessments are conducted. By combining cutting-edge technology with educational best practices, we aim to provide a more accurate, efficient, and personalized testing experience.</p>
+            
+            <h2>Our Mission</h2>
+            <p>To empower learners and educators with intelligent, adaptive assessments that accurately measure ability and guide personalized learning paths.</p>
+            
+            <h2>Our Team</h2>
+            <p>We are a diverse team of educators, psychometricians, software engineers, and data scientists passionate about improving educational outcomes through technology.</p>
+            
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, please don't hesitate to reach out:</p>
+            <ul>
+                <li>Email: info@adaptivetesting.com</li>
+                <li>Phone: (123) 456-7890</li>
+                <li>Address: 123 Education Lane, Learning City, ED 12345</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adaptive Testing System, Copyright &copy; 2023</p>
+    </footer>
+</body>
+</html>
+

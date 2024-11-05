@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Testing System</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--primary-color) 3px solid;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        #showcase {
+            min-height: 400px;
+            background: url('https://source.unsplash.com/1600x900/?education,technology') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        #showcase p {
+            font-size: 20px;
+        }
+
+        #boxes {
+            margin-top: 20px;
+        }
+
+        #boxes .box {
+            float: left;
+            text-align: center;
+            width: 30%;
+            padding: 10px;
+            background: #ffffff;
+            margin: 1.66%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #boxes .box img {
+            width: 90px;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--secondary-color);
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            #boxes .box {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            header {
+                padding-bottom: 20px;
+            }
+
+            #showcase h1 {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Adaptive</span> Testing System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="start_test.html">Start Test</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to Adaptive Testing</h1>
+            <p>Personalized assessments tailored to your individual abilities</p>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="https://img.icons8.com/color/96/000000/test.png" alt="Take a Test">
+                <h3>Take a Test</h3>
+                <p>Start an adaptive test tailored to your skill level</p>
+            </div>
+            <div class="box">
+                <img src="https://img.icons8.com/color/96/000000/statistics.png" alt="View Results">
+                <h3>View Results</h3>
+                <p>Analyze your performance and track your progress</p>
+            </div>
+            <div class="box">
+                <img src="https://img.icons8.com/color/96/000000/info.png" alt="Learn More">
+                <h3>Learn More</h3>
+                <p>Discover how adaptive testing enhances your learning experience</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adaptive Testing System, Copyright &copy; 2023</p>
+    </footer>
+
+    <script>
+        // Add smooth scrolling to nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight current nav item
+        const currentLocation = location.href;
+        const menuItems = document.querySelectorAll('nav a');
+        menuItems.forEach(item => {
+            if(item.href === currentLocation){
+                item.classList.add('current');
+            }
+        });
+    </script>
+</body>
+</html>

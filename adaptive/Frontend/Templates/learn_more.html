@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - Adaptive Testing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Adaptive</span> Testing System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('start_test') }}">Start Test</a></li>
+                    <li><a href="{{ url_for('view_results') }}">Results</a></li>
+                    <li class="current"><a href="{{ url_for('learn_more') }}">Learn More</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>Learn More About Adaptive Testing</h1>
+            <h2>What is Adaptive Testing?</h2>
+            <p>Adaptive testing is a form of computer-based test that adapts to the test-taker's ability level. Unlike fixed tests, where everyone receives the same questions, adaptive tests adjust the difficulty of questions based on the test-taker's performance.</p>
+            
+            <h2>How Does It Work?</h2>
+            <p>The test begins with questions of average difficulty. As you answer questions correctly, the difficulty increases. If you answer incorrectly, the difficulty decreases. This process continues until the test can accurately estimate your ability level.</p>
+            
+            <h2>Benefits of Adaptive Testing</h2>
+            <ul>
+                <li>More accurate measurement of ability</li>
+                <li>Shorter test duration</li>
+                <li>Reduced test anxiety</li>
+                <li>Immediate feedback</li>
+                <li>Personalized learning recommendations</li>
+            </ul>
+            
+            <h2>Our Approach</h2>
+            <p>Our adaptive testing system uses advanced algorithms combining Item Response Theory (IRT) and Machine Learning to provide the most accurate and efficient assessment of your abilities.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adaptive Testing System, Copyright &copy; 2023</p>
+    </footer>
+</body>
+</html>
+

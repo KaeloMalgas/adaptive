@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve adaptive testing application
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/adaptive_testing
+Environment="PATH=/home/ubuntu/adaptive_testing/venv/bin"
+ExecStart=/home/ubuntu/adaptive_testing/venv/bin/gunicorn --workers 3 --bind unix:adaptive_testing.sock -m 007 app:app
+
+[Install]
+WantedBy=multi-user.target
